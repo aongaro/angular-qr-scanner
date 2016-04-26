@@ -54,7 +54,7 @@ angular.module('qrScanner', ["ng"]).directive('qrScanner', ['$interval', '$windo
 
       // Call the getUserMedia method with our callback functions
       if (navigator.getUserMedia) {
-        navigator.getUserMedia({video: { facingMode: (front: "environment") }}, successCallback, function(e) {
+        navigator.getUserMedia({video: { facingMode: {front: "environment"} }}, successCallback, function(e) {
           scope.ngVideoError({error: e});
         });
       } else {
